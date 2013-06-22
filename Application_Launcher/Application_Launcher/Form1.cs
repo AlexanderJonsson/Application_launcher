@@ -55,20 +55,40 @@ namespace Application_Launcher
             applicationList.Columns.Add("Start");
             applicationList.Columns.Add("Path");
             applicationList.Columns.Add("Arguments");
-
-            XmlDocument xdoc = new XmlDocument();
-            xdoc.Load(@"C:\Users\alex\Dropbox\Public\Programmering\Application_launcher\Application_Launcher\Application_Launcher\application_list.xml");
-            foreach (XmlNode node in xdoc.SelectNodes("applications/application"))
+            try
             {
-                string[] row = {"", node.Attributes.Item(0).Value, node.Attributes.Item(1).Value };
-                ListViewItem it = new ListViewItem(row);
-                //applicationList.Items.Add("").SubItems.AddRange(row);
-                if (node.Attributes.Item(2).Value == "yes")
+
+                XmlDocument xdoc = new XmlDocument();
+                //xdoc.Load(@"C:\Users\alex\Dropbox\Public\Programmering\Application_launcher\Application_Launcher\Application_Launcher\application_list.xml");
+                xdoc.Load("application_list.xml");
+                foreach (XmlNode node in xdoc.SelectNodes("applications/application"))
                 {
-                    it.Checked = true;
+                    string[] row = { "", node.Attributes.Item(0).Value, node.Attributes.Item(1).Value };
+                    ListViewItem it = new ListViewItem(row);
+                    //applicationList.Items.Add("").SubItems.AddRange(row);
+                    if (node.Attributes.Item(2).Value == "yes")
+                    {
+                        it.Checked = true;
+                    }
+                    applicationList.Items.Add(it);
                 }
-                applicationList.Items.Add(it);           
             }
+            catch (Exception)
+            {
+                createNewApplicationList();
+            }
+        }
+
+        private void createNewApplicationList()
+        {
+            
+            XmlWriter initialList = XmlWriter.Create("application_list.xml");
+            initialList.WriteStartDocument();
+            initialList.WriteStartElement("applications");
+            initialList.WriteEndElement();
+            initialList.WriteEndDocument();
+            initialList.Close();
+            PopulateApplicationList();
         }
 
         private void applicationList_ItemChecked(object sender, ItemCheckedEventArgs e)
@@ -80,6 +100,8 @@ namespace Application_Launcher
         private void button4_Click(object sender, EventArgs e)
         {
             startApplications();
+            button4.Enabled = false;
+            timer1.Start();
         }
 
         private void startApplications()
@@ -90,7 +112,32 @@ namespace Application_Launcher
                     Process.Start(li.SubItems[1].Text);
                 }
             }
-            //Process.Start
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            button4.Enabled = true;
+            timer1.Stop();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /*
+            Add_application addwindow = new Add_application();
+            DialogResult dr = new DialogResult();
+            dr= addwindow.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                MessageBox.Show("OK");
+            }
+            else if (dr == DialogResult.Cancel)
+                MessageBox.Show("User clicked Cancel button");
+             */
+            if (new Add_application().ShowDialog() == DialogResult.OK)
+            {
+                PopulateApplicationList();
+            }
+
         }
     }
 }

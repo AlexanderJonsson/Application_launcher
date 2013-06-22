@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Application_Launcher
 {
@@ -15,6 +16,44 @@ namespace Application_Launcher
         public Add_application()
         {
             InitializeComponent();
+        }
+
+        private void Savebutton_Click(object sender, EventArgs e)
+        {
+            saveNewApplication();
+            this.Close();
+        }
+
+        private void saveNewApplication()
+        {
+
+
+            /*
+            XmlReader reader = XmlReader.Create("application_list.xml");
+            XmlWriter writer = XmlWriter.Create("application_listopera:speeddial
+.xml");
+            
+            reader.MoveToContent();
+            reader.Read();
+
+            writer.WriteStartElement("applications");
+            writer.WriteAttributeString("path", PathTextBox.Text);
+            writer.WriteAttributeString("arguments", ArgumentsTextBox.Text);
+            if (StartCheckBox.Checked == true)
+            {
+                writer.WriteAttributeString("default_start", "yes");
+            }
+            else
+            {
+                writer.WriteAttributeString("default_start", "no");
+            }
+            writer.WriteEndElement();
+            */
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

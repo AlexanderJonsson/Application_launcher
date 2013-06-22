@@ -2,4 +2,5 @@
 <applications>
   <application path="C:\Windows\notepad.exe" arguments="checked" default_start="yes" />
   <application path="C:\Windows\System32\mspaint.exe" arguments="checked" default_start="no" />
+  <application path="C:\Windows\System32\mspaint.exe" arguments="checked" default_start="no" />
 </applications>
