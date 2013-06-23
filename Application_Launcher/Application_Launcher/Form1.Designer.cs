@@ -52,7 +52,7 @@
             this.button1.Location = new System.Drawing.Point(316, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Test";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -63,7 +63,7 @@
             this.button2.Location = new System.Drawing.Point(316, 145);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -74,7 +74,7 @@
             this.button3.Location = new System.Drawing.Point(397, 145);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -98,7 +98,7 @@
             this.applicationList.Location = new System.Drawing.Point(12, 12);
             this.applicationList.Name = "applicationList";
             this.applicationList.Size = new System.Drawing.Size(460, 127);
-            this.applicationList.TabIndex = 4;
+            this.applicationList.TabIndex = 0;
             this.applicationList.UseCompatibleStateImageBehavior = false;
             this.applicationList.View = System.Windows.Forms.View.Details;
             this.applicationList.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.applicationList_ItemChecked);
@@ -142,7 +142,7 @@
             this.button4.Location = new System.Drawing.Point(397, 174);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 4;
             this.button4.Text = "START";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -163,7 +163,7 @@
             this.aboutLabel.Location = new System.Drawing.Point(15, 183);
             this.aboutLabel.Name = "aboutLabel";
             this.aboutLabel.Size = new System.Drawing.Size(35, 13);
-            this.aboutLabel.TabIndex = 8;
+            this.aboutLabel.TabIndex = 5;
             this.aboutLabel.TabStop = true;
             this.aboutLabel.Text = "About";
             this.aboutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.aboutLabel_LinkClicked);

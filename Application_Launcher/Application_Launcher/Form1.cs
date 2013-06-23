@@ -27,12 +27,6 @@ namespace Application_Launcher
 
         private static void TestXML()
         {
-            XmlDocument xdoc = new XmlDocument();
-            xdoc.Load(@"C:\Users\alex\Dropbox\Public\Programmering\Application_launcher\Application_Launcher\Application_Launcher\application_list.xml");
-            foreach (XmlNode node in xdoc.SelectNodes("applications/application"))
-            {
-                MessageBox.Show(node.Attributes.Item(0).Value + "\n" + node.Attributes.Item(1).Value + "\n" + node.Attributes.Item(2).Value);
-            }
         }
 
         private void test2_Click(object sender, EventArgs e)
@@ -41,6 +35,7 @@ namespace Application_Launcher
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            button1.Visible = false;
             this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
             PopulateApplicationList();
         }
@@ -48,22 +43,29 @@ namespace Application_Launcher
         private void PopulateApplicationList()
         {
             applicationList.ItemChecked -= applicationList_ItemChecked;
-            applicationList.View = View.Details;
-            applicationList.CheckBoxes = true;
-            applicationList.AllowColumnReorder = true;
-            applicationList.GridLines = true;
-            applicationList.FullRowSelect = true;
-            applicationList.Clear();
-            applicationList.Columns.Add("Start");
-            applicationList.Columns.Add("Path");
-            applicationList.Columns.Add("Arguments");
-            applicationList.Columns.Add("Added");
-       
-            foreach (ListViewItem item in new ApplicationListParser().getUpdatedApplicationList())
+            try
             {
-                applicationList.Items.Add(item);
+                applicationList.View = View.Details;
+                applicationList.CheckBoxes = true;
+                applicationList.AllowColumnReorder = true;
+                applicationList.GridLines = true;
+                applicationList.FullRowSelect = true;
+                applicationList.Clear();
+                applicationList.Columns.Add("Start");
+                applicationList.Columns.Add("Path");
+                applicationList.Columns.Add("Arguments");
+                applicationList.Columns.Add("Added");
+
+                foreach (ListViewItem item in new ApplicationListParser().getUpdatedApplicationList())
+                {
+                    applicationList.Items.Add(item);
+                }
+
             }
-            applicationList.ItemChecked += applicationList_ItemChecked;
+            catch (Exception e)
+            {
+            }
+            finally { applicationList.ItemChecked += applicationList_ItemChecked; }
         }
 
         private void createNewApplicationList()
@@ -73,7 +75,7 @@ namespace Application_Launcher
 
         private void applicationList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            new ApplicationListParser().changeStartDefault(applicationList.Items[e.Item.Index].SubItems[3].Text);
+            //new ApplicationListParser().changeStartDefault(applicationList.Items[e.Item.Index].SubItems[3].Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
