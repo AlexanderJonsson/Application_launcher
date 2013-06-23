@@ -20,7 +20,8 @@ namespace Application_Launcher
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            saveNewApplication();
+            //saveNewApplication();
+            new ApplicationListParser().addNewApplicationToList(PathTextBox.Text,ArgumentsTextBox.Text,StartCheckBox.Checked);
             this.Close();
         }
 

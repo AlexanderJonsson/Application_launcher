@@ -22,7 +22,7 @@ namespace Application_Launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TestXML();
+            
         }
 
         private static void TestXML()
@@ -46,6 +46,7 @@ namespace Application_Launcher
 
         private void PopulateApplicationList()
         {
+            applicationList.ItemChecked -= applicationList_ItemChecked;
             applicationList.View = View.Details;
             applicationList.CheckBoxes = true;
             applicationList.AllowColumnReorder = true;
@@ -55,46 +56,23 @@ namespace Application_Launcher
             applicationList.Columns.Add("Start");
             applicationList.Columns.Add("Path");
             applicationList.Columns.Add("Arguments");
-            try
+            applicationList.Columns.Add("Added");
+       
+            foreach (ListViewItem item in new ApplicationListParser().getUpdatedApplicationList())
             {
-
-                XmlDocument xdoc = new XmlDocument();
-                //xdoc.Load(@"C:\Users\alex\Dropbox\Public\Programmering\Application_launcher\Application_Launcher\Application_Launcher\application_list.xml");
-                xdoc.Load("application_list.xml");
-                foreach (XmlNode node in xdoc.SelectNodes("applications/application"))
-                {
-                    string[] row = { "", node.Attributes.Item(0).Value, node.Attributes.Item(1).Value };
-                    ListViewItem it = new ListViewItem(row);
-                    //applicationList.Items.Add("").SubItems.AddRange(row);
-                    if (node.Attributes.Item(2).Value == "yes")
-                    {
-                        it.Checked = true;
-                    }
-                    applicationList.Items.Add(it);
-                }
+                applicationList.Items.Add(item);
             }
-            catch (Exception)
-            {
-                createNewApplicationList();
-            }
+            applicationList.ItemChecked += applicationList_ItemChecked;
         }
 
         private void createNewApplicationList()
         {
-            
-            XmlWriter initialList = XmlWriter.Create("application_list.xml");
-            initialList.WriteStartDocument();
-            initialList.WriteStartElement("applications");
-            initialList.WriteEndElement();
-            initialList.WriteEndDocument();
-            initialList.Close();
             PopulateApplicationList();
         }
 
         private void applicationList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            label1.Text = applicationList.SelectedItems[0].SubItems[1].Text;
-            label1.Text = e.Item.Selected.ToString();
+            new ApplicationListParser().changeStartDefault(applicationList.Items[e.Item.Index].SubItems[3].Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -122,22 +100,38 @@ namespace Application_Launcher
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
-            Add_application addwindow = new Add_application();
-            DialogResult dr = new DialogResult();
-            dr= addwindow.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                MessageBox.Show("OK");
-            }
-            else if (dr == DialogResult.Cancel)
-                MessageBox.Show("User clicked Cancel button");
-             */
             if (new Add_application().ShowDialog() == DialogResult.OK)
             {
                 PopulateApplicationList();
             }
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new ApplicationListParser().deleteApplicationFromList(applicationList.SelectedItems[0].SubItems[3].Text);
+                PopulateApplicationList();
+            }
+            catch { showTip("Please select an item to remove"); }
+            
+        }
+
+        private void tipTimer_Tick(object sender, EventArgs e)
+        {
+            label1.Hide();
+            tipTimer.Stop();
+        }
+        private void showTip(string tip)
+        {
+            label1.Text = tip;
+            label1.Show();
+            tipTimer.Start();
+        }
+
+        private void aboutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new AboutBox1().Show();
         }
     }
 }
