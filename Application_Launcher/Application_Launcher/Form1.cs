@@ -24,11 +24,6 @@ namespace Application_Launcher
         {
             
         }
-
-        private static void TestXML()
-        {
-        }
-
         private void test2_Click(object sender, EventArgs e)
         {
         }
@@ -75,7 +70,7 @@ namespace Application_Launcher
 
         private void applicationList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            //new ApplicationListParser().changeStartDefault(applicationList.Items[e.Item.Index].SubItems[3].Text);
+            new ApplicationListParser().changeStartDefault(applicationList.Items[e.Item.Index].SubItems[3].Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
