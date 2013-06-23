@@ -20,41 +20,25 @@ namespace Application_Launcher
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            //saveNewApplication();
             new ApplicationListParser().addNewApplicationToList(PathTextBox.Text,ArgumentsTextBox.Text,StartCheckBox.Checked);
             this.Close();
-        }
-
-        private void saveNewApplication()
-        {
-
-
-            /*
-            XmlReader reader = XmlReader.Create("application_list.xml");
-            XmlWriter writer = XmlWriter.Create("application_listopera:speeddial
-.xml");
-            
-            reader.MoveToContent();
-            reader.Read();
-
-            writer.WriteStartElement("applications");
-            writer.WriteAttributeString("path", PathTextBox.Text);
-            writer.WriteAttributeString("arguments", ArgumentsTextBox.Text);
-            if (StartCheckBox.Checked == true)
-            {
-                writer.WriteAttributeString("default_start", "yes");
-            }
-            else
-            {
-                writer.WriteAttributeString("default_start", "no");
-            }
-            writer.WriteEndElement();
-            */
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Add_application_Load(object sender, EventArgs e)
+        {
+            this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog selectFile = new OpenFileDialog();
+            selectFile.ShowDialog();
+            PathTextBox.Text = selectFile.FileName;
         }
     }
 }

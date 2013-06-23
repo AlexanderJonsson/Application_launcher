@@ -62,6 +62,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CancelButton
             // 
@@ -116,7 +117,6 @@
             this.AcceptButton = this.Savebutton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(389, 136);
             this.Controls.Add(this.ArgumentsTextBox);
             this.Controls.Add(this.label2);
@@ -128,7 +128,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Add_application";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Add_application";
+            this.Text = "Add application";
+            this.Load += new System.EventHandler(this.Add_application_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

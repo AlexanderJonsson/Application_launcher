@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace Application_Launcher
 {
-    partial class AboutBox1 : Form
+    partial class sj : Form
     {
-        public AboutBox1()
+        public sj()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
+            this.Text = String.Format("About {0}", "Application Launcher Tremens");
+            this.labelProductName.Text = "Application Launcher Tremens";
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
@@ -105,6 +105,12 @@ namespace Application_Launcher
         private void okButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AboutBox1_Load(object sender, EventArgs e)
+        {
+            this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
+            textBoxDescription.Text = Application_Launcher.Properties.Resources.license_information;
         }
     }
 }

@@ -41,6 +41,7 @@ namespace Application_Launcher
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
             PopulateApplicationList();
         }
 
@@ -131,7 +132,7 @@ namespace Application_Launcher
 
         private void aboutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new AboutBox1().Show();
+            new sj().Show();
         }
     }
 }
