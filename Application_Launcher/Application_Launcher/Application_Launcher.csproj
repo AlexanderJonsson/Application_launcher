@@ -25,7 +25,7 @@
     <InstallUrl>http://applicationstartertremens.codeplex.com/releases/clickonce/</InstallUrl>
     <ProductName>Application Launcher Tremens</ProductName>
     <PublisherName>Alexander Jonsson</PublisherName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>0.9.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

@@ -36,7 +36,6 @@
             this.StartColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ApplicationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ArgumentsColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.test2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -108,18 +107,9 @@
             this.ArgumentsColumnHeader.Text = "Arguments";
             this.ArgumentsColumnHeader.Width = 80;
             // 
-            // test2
-            // 
-            this.test2.Location = new System.Drawing.Point(397, 489);
-            this.test2.Name = "test2";
-            this.test2.Size = new System.Drawing.Size(75, 23);
-            this.test2.TabIndex = 5;
-            this.test2.Text = "test2";
-            this.test2.UseVisualStyleBackColor = true;
-            this.test2.Click += new System.EventHandler(this.test2_Click);
-            // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 154);
             this.label1.Name = "label1";
@@ -130,6 +120,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Location = new System.Drawing.Point(397, 174);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -150,6 +141,7 @@
             // 
             // aboutLabel
             // 
+            this.aboutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.aboutLabel.AutoSize = true;
             this.aboutLabel.Location = new System.Drawing.Point(15, 183);
             this.aboutLabel.Name = "aboutLabel";
@@ -167,7 +159,6 @@
             this.Controls.Add(this.aboutLabel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.test2);
             this.Controls.Add(this.applicationList);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -191,7 +182,6 @@
         private System.Windows.Forms.ColumnHeader StartColumnHeader;
         private System.Windows.Forms.ColumnHeader ApplicationColumnHeader;
         private System.Windows.Forms.ColumnHeader ArgumentsColumnHeader;
-        private System.Windows.Forms.Button test2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer timer1;
