@@ -33,6 +33,7 @@ namespace Application_Launcher
             button1.Visible = false;
             this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
             PopulateApplicationList();
+            
         }
 
         private void PopulateApplicationList()
@@ -60,7 +61,9 @@ namespace Application_Launcher
             catch (Exception e)
             {
             }
-            finally { applicationList.ItemChecked += applicationList_ItemChecked; }
+            finally { applicationList.ItemChecked += applicationList_ItemChecked;
+            applicationList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void createNewApplicationList()
