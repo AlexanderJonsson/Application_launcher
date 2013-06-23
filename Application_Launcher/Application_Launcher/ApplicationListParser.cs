@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Application_Launcher
 {
     class ApplicationListParser
     {
-        private string applicationListFilePath="application_list.xml";
+        private string applicationListFilePath=Path.Combine(Environment.GetFolderPath(
+    Environment.SpecialFolder.ApplicationData), "application_list.xml");
         public IEnumerable<ListViewItem> getUpdatedApplicationList()
         {
             XmlDocument xdoc = new XmlDocument();
