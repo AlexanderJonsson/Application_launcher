@@ -11,7 +11,7 @@ namespace Application_Launcher
 {
     class ApplicationListParser
     {
-        private string applicationListFilePath=Path.Combine(Environment.GetFolderPath(
+        private string applicationListFilePath = Path.Combine(Environment.GetFolderPath(
     Environment.SpecialFolder.ApplicationData), "application_list.xml");
         public IEnumerable<ListViewItem> getUpdatedApplicationList()
         {
@@ -19,7 +19,7 @@ namespace Application_Launcher
             xdoc.Load(applicationListFilePath);
             foreach (XmlNode node in xdoc.SelectNodes("applications/application"))
             {
-                string[] row = { "", node.Attributes.Item(0).Value, node.Attributes.Item(1).Value,node.Attributes.Item(3).Value };
+                string[] row = { "", node.Attributes.Item(0).Value, node.Attributes.Item(1).Value, node.Attributes.Item(3).Value };
                 ListViewItem it = new ListViewItem(row);
                 if (node.Attributes.Item(2).Value == "yes")
                 {
@@ -28,7 +28,8 @@ namespace Application_Launcher
                 yield return it;
             }
         }
-        public void createNewApplicationList(){
+        public void createNewApplicationList()
+        {
             var initialList = XmlWriter.Create(applicationListFilePath);
             initialList.WriteStartDocument();
             initialList.WriteStartElement("applications");
@@ -38,7 +39,7 @@ namespace Application_Launcher
         }
 
         public void addNewApplicationToList(string path, string arguments, bool start)
-        {           
+        {
             var applicationListFile = new XmlDocument();
             try
             {

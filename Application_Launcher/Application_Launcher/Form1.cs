@@ -22,7 +22,7 @@ namespace Application_Launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void test2_Click(object sender, EventArgs e)
         {
@@ -33,7 +33,7 @@ namespace Application_Launcher
             button1.Visible = false;
             this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
             PopulateApplicationList();
-            
+
         }
 
         private void PopulateApplicationList()
@@ -61,8 +61,10 @@ namespace Application_Launcher
             catch (Exception e)
             {
             }
-            finally { applicationList.ItemChecked += applicationList_ItemChecked;
-            applicationList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            finally
+            {
+                applicationList.ItemChecked += applicationList_ItemChecked;
+                applicationList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
         }
 
@@ -85,7 +87,8 @@ namespace Application_Launcher
 
         private void startApplications()
         {
-            foreach (ListViewItem li in applicationList.Items){
+            foreach (ListViewItem li in applicationList.Items)
+            {
                 if (li.Checked == true)
                 {
                     Process.Start(li.SubItems[1].Text);
@@ -115,7 +118,7 @@ namespace Application_Launcher
                 PopulateApplicationList();
             }
             catch { showTip("Please select an item to remove"); }
-            
+
         }
 
         private void tipTimer_Tick(object sender, EventArgs e)
