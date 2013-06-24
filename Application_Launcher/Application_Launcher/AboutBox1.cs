@@ -14,8 +14,8 @@ namespace Application_Launcher
         public sj()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", "Application Launcher Tremens");
-            this.labelProductName.Text = "Application Launcher Tremens";
+            this.Text = String.Format("About {0}", "Application Starter Tremens");
+            this.labelProductName.Text = "Application Starter Tremens";
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
