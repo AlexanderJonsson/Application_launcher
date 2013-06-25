@@ -77,6 +77,7 @@
             // 
             // applicationList
             // 
+            this.applicationList.AllowColumnReorder = true;
             this.applicationList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -86,6 +87,7 @@
             this.ApplicationColumnHeader,
             this.ArgumentsColumnHeader});
             this.applicationList.Location = new System.Drawing.Point(12, 12);
+            this.applicationList.MultiSelect = false;
             this.applicationList.Name = "applicationList";
             this.applicationList.Size = new System.Drawing.Size(460, 127);
             this.applicationList.TabIndex = 0;
