@@ -41,6 +41,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tipTimer = new System.Windows.Forms.Timer(this.components);
             this.aboutLabel = new System.Windows.Forms.LinkLabel();
+            this.rarity = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.rarity)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -113,7 +115,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 154);
+            this.label1.Location = new System.Drawing.Point(15, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
@@ -153,11 +155,22 @@
             this.aboutLabel.Text = "About";
             this.aboutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.aboutLabel_LinkClicked);
             // 
+            // rarity
+            // 
+            this.rarity.Image = global::Application_Launcher.Properties.Resources._204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b;
+            this.rarity.Location = new System.Drawing.Point(260, 147);
+            this.rarity.Name = "rarity";
+            this.rarity.Size = new System.Drawing.Size(50, 50);
+            this.rarity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rarity.TabIndex = 7;
+            this.rarity.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 212);
+            this.Controls.Add(this.rarity);
             this.Controls.Add(this.aboutLabel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
@@ -170,6 +183,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application Starter Tremens";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.rarity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +203,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer tipTimer;
         private System.Windows.Forms.LinkLabel aboutLabel;
+        private System.Windows.Forms.PictureBox rarity;
     }
 }
 

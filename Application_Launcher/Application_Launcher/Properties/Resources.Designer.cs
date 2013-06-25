@@ -61,6 +61,16 @@ namespace Application_Launcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b {
+            get {
+                object obj = ResourceManager.GetObject("204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon Franksouza183_Fs_Apps_aptana {

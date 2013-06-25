@@ -31,6 +31,7 @@ namespace Application_Launcher
         private void Form1_Load(object sender, EventArgs e)
         {
             button1.Visible = false;
+            rarity.Visible = false;
             this.Icon = Application_Launcher.Properties.Resources.Franksouza183_Fs_Apps_aptana;
             PopulateApplicationList();
 
@@ -81,6 +82,7 @@ namespace Application_Launcher
         private void button4_Click(object sender, EventArgs e)
         {
             startApplications();
+            rarity.Visible = true;
             button4.Enabled = false;
             timer1.Start();
         }
@@ -99,6 +101,7 @@ namespace Application_Launcher
         private void timer1_Tick(object sender, EventArgs e)
         {
             button4.Enabled = true;
+            rarity.Visible = false;
             timer1.Stop();
         }
 

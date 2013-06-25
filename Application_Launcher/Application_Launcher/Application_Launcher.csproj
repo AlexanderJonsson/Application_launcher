@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="application_list.xml" />
+    <None Include="Resources\204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b.gif" />
     <None Include="Resources\självporträtt.png" />
     <None Include="Resources\license_information.txt" />
     <None Include="Resources\Franksouza183-Fs-Apps-aptana.ico" />
