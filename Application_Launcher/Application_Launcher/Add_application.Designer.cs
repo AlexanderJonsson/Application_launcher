@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PathTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.CancelButtonF = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.StartCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,7 +56,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(341, 4);
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Location = new System.Drawing.Point(342, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 23);
             this.button1.TabIndex = 1;
@@ -64,21 +65,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // CancelButton
+            // CancelButtonF
             // 
-            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelButton.Location = new System.Drawing.Point(301, 103);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 5;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButtonF.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancelButtonF.Location = new System.Drawing.Point(302, 103);
+            this.CancelButtonF.Name = "CancelButtonF";
+            this.CancelButtonF.Size = new System.Drawing.Size(75, 23);
+            this.CancelButtonF.TabIndex = 5;
+            this.CancelButtonF.Text = "Cancel";
+            this.CancelButtonF.UseVisualStyleBackColor = true;
+            this.CancelButtonF.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // Savebutton
             // 
             this.Savebutton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Savebutton.Location = new System.Drawing.Point(220, 103);
+            this.Savebutton.Location = new System.Drawing.Point(221, 103);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(75, 23);
             this.Savebutton.TabIndex = 4;
@@ -117,15 +118,17 @@
             this.AcceptButton = this.Savebutton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CancelButtonF;
             this.ClientSize = new System.Drawing.Size(389, 136);
             this.Controls.Add(this.ArgumentsTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.StartCheckBox);
             this.Controls.Add(this.Savebutton);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.CancelButtonF);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PathTextBox);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Add_application";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add application";
@@ -140,7 +143,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox PathTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button CancelButtonF;
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.CheckBox StartCheckBox;
         private System.Windows.Forms.Label label2;

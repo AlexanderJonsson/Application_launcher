@@ -59,7 +59,7 @@ namespace Application_Launcher
                 }
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
             finally
@@ -98,7 +98,8 @@ namespace Application_Launcher
             {
                 if (li.Checked == true)
                 {
-                    Process.Start(li.SubItems[1].Text);
+                    try{Process.Start(li.SubItems[1].Text);}
+                    catch (Exception e){MessageBox.Show("Error: "+li.SubItems[1].Text+"\n"+e.Message);}
                 }
             }
         }
