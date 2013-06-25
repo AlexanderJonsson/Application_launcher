@@ -81,6 +81,11 @@ namespace Application_Launcher
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (minimizeCheckbox.Checked == true)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+            
             startApplications();
             rarity.Visible = true;
             button4.Enabled = false;

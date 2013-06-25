@@ -42,13 +42,14 @@
             this.tipTimer = new System.Windows.Forms.Timer(this.components);
             this.aboutLabel = new System.Windows.Forms.LinkLabel();
             this.rarity = new System.Windows.Forms.PictureBox();
+            this.minimizeCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.rarity)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(316, 174);
+            this.button1.Location = new System.Drawing.Point(56, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -157,19 +158,32 @@
             // 
             // rarity
             // 
+            this.rarity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rarity.Image = global::Application_Launcher.Properties.Resources._204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b;
-            this.rarity.Location = new System.Drawing.Point(260, 147);
+            this.rarity.Location = new System.Drawing.Point(231, 147);
             this.rarity.Name = "rarity";
             this.rarity.Size = new System.Drawing.Size(50, 50);
             this.rarity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.rarity.TabIndex = 7;
             this.rarity.TabStop = false;
             // 
+            // minimizeCheckbox
+            // 
+            this.minimizeCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeCheckbox.AutoSize = true;
+            this.minimizeCheckbox.Location = new System.Drawing.Point(287, 178);
+            this.minimizeCheckbox.Name = "minimizeCheckbox";
+            this.minimizeCheckbox.Size = new System.Drawing.Size(104, 17);
+            this.minimizeCheckbox.TabIndex = 8;
+            this.minimizeCheckbox.Text = "Minimize on start";
+            this.minimizeCheckbox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 212);
+            this.Controls.Add(this.minimizeCheckbox);
             this.Controls.Add(this.rarity);
             this.Controls.Add(this.aboutLabel);
             this.Controls.Add(this.button4);
@@ -204,6 +218,7 @@
         private System.Windows.Forms.Timer tipTimer;
         private System.Windows.Forms.LinkLabel aboutLabel;
         private System.Windows.Forms.PictureBox rarity;
+        private System.Windows.Forms.CheckBox minimizeCheckbox;
     }
 }
 
