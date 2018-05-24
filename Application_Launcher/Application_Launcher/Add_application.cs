@@ -37,8 +37,10 @@ namespace Application_Launcher
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog selectFile = new OpenFileDialog();
-            selectFile.ShowDialog();
-            PathTextBox.Text = selectFile.FileName;
+            if (selectFile.ShowDialog(this) == DialogResult.OK)
+            {
+                PathTextBox.Text = selectFile.InitialDirectory + selectFile.FileName;
+            }
         }
     }
 }
