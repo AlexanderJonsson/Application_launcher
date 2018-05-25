@@ -159,11 +159,11 @@
             // rarity
             // 
             this.rarity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rarity.Image = global::Application_Launcher.Properties.Resources._204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b;
+            this.rarity.Image = global::Application_Launcher.Properties.Resources.sanic;
             this.rarity.Location = new System.Drawing.Point(231, 147);
             this.rarity.Name = "rarity";
             this.rarity.Size = new System.Drawing.Size(50, 50);
-            this.rarity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rarity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rarity.TabIndex = 7;
             this.rarity.TabStop = false;
             // 

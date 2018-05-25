@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\alejon\pub\</PublishUrl>
+    <PublishUrl>C:\Users\alejon\Desktop\Application Starter Tremens\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -29,7 +29,7 @@
     <PublisherName>Tremens Suite</PublisherName>
     <SuiteName>Application Starter Tremens</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>0.9.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="application_list.xml" />
+    <None Include="Resources\giphy.gif" />
     <None Include="Resources\204063__safe_rarity_animated_sprite_icon_clapping_50e91529a4c72d51f300032b.gif" />
     <None Include="Resources\självporträtt.png" />
     <None Include="Resources\license_information.txt" />

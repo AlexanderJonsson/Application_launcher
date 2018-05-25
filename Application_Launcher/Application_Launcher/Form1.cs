@@ -87,7 +87,7 @@ namespace Application_Launcher
             }
             
             startApplications();
-            rarity.Visible = true;
+            //rarity.Visible = true;
             button4.Enabled = false;
             timer1.Start();
         }
