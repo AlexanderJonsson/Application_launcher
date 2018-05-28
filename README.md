@@ -1,6 +1,8 @@
 Application Starter Tremens
 ===========================
 
-This little application was written to simplify my existence at work where i every day (and sometimes several times a day) need to start the same applications. Until now i have used an elisp script to do the job but since i was now in need to change stuff around this was a more simple and fun way of doing it.
+Application Starter Tremens is exactly what it sounds like.
 
-Since codeplex has been shut down i have forked this project and moved it to GitHub since i still need this app from time to time. ClickOnce deployment and automatic updates have been diabled.
+Add applications to the list, check the ones you want to start and push "Start".
+
+Download the latest version [here](https://github.com/AlexanderJonsson/Application_launcher/raw/master/Published/setup.exe)

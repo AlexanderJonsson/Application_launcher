@@ -22,7 +22,5 @@
 *.RTF	 diff=astextplain
 
 *.manifest binary
-
 *.deploy binary
-
 *.application binary
